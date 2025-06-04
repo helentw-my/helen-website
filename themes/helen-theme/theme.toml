@@ -1,0 +1,10 @@
+name = "Helen Theme"
+description = "聽海倫講看脈專用主題"
+homepage = "https://helen.tw"
+tags = ["blog", "personal", "chinese"]
+features = ["responsive", "syntax-highlighting"]
+min_version = "0.41.0"
+
+[author]
+  name = "Helen"
+  homepage = "https://helen.tw"
