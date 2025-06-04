@@ -494,7 +494,29 @@
             </ul>
         </div>
         {{ end }}
-
+<!-- Reader Feedback -->
+<div class="feedback-card" id="feedback">
+    <h3>你想知道什麼？</h3>
+    <p style="text-align: center; color: #777; margin-bottom: 30px;">
+        有什麼脈診相關的問題或想聽我聊的話題，都可以跟我說<br>
+        說不定下一篇文章就是你的提議
+    </p>
+    <form class="feedback-form" name="reader-feedback" method="POST" netlify>
+        <div class="form-group">
+            <label for="topic">想聽的話題或問題</label>
+            <textarea id="topic" name="topic" placeholder="例如：為什麼有些醫師把脈只要幾秒鐘就知道病情？" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="email">Email（可選，想收到回覆再填）</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com">
+        </div>
+        <div class="form-group">
+            <label for="name">怎麼稱呼（可選）</label>
+            <input type="text" id="name" name="name" placeholder="匿名也沒關係">
+        </div>
+        <button type="submit" class="submit-btn">丟個想法給海倫</button>
+    </form>
+</div>
         <!-- Footer -->
         <footer>
             <div class="footer-content">
