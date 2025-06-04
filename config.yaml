@@ -1,0 +1,37 @@
+baseURL: 'https://helen.tw'
+languageCode: 'zh-tw'
+title: '聽海倫講看脈'
+theme: 'helen-theme'
+
+params:
+  description: '用人話講脈診科學化，也聊那些你不知道的脈診真相'
+  author: '海倫'
+  email: 'helen@helen.tw'
+  
+menu:
+  main:
+    - name: "講看脈"
+      url: "/posts/"
+      weight: 1
+    - name: "想知道什麼"
+      url: "/feedback/"
+      weight: 2
+    - name: "事不關脈"
+      url: "/off-topic/"
+      weight: 3
+    - name: "關於海倫"
+      url: "/about/"
+      weight: 4
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: github
+    lineNos: true
+
+outputs:
+  home: ["HTML", "RSS"]
+  page: ["HTML"]
+  section: ["HTML", "RSS"]
