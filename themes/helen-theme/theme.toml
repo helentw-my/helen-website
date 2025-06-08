@@ -1,10 +1,12 @@
-name = "Helen Theme"
+name = "helen-theme"
+license = "MIT"
+licenselink = "https://github.com/helen-website/helen-theme/blob/main/LICENSE"
 description = "聽海倫講看脈專用主題"
 homepage = "https://helen.tw"
-tags = ["blog", "personal", "chinese"]
-features = ["responsive", "syntax-highlighting"]
-min_version = "0.41.0"
+tags = ["blog", "dark", "chinese", "medical"]
+features = ["responsive", "dark-theme", "chinese"]
+min_version = "0.80.0"
 
 [author]
-  name = "Helen"
+  name = "海倫"
   homepage = "https://helen.tw"
