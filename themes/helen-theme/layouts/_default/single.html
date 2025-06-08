@@ -188,7 +188,7 @@
             background: #1a1a1a;
             border: 2px solid #555;
             border-radius: 10px;
-            color: #e5e5e5;
+            color: #f5f5f5;
             font-size: 0.95rem;
             transition: all 0.3s ease;
         }
@@ -248,7 +248,7 @@
         }
         
         .article-meta {
-            color: #aaa;
+            color: #bbb;
             font-size: 0.95rem;
             display: flex;
             justify-content: center;
@@ -259,7 +259,7 @@
         
         .tag {
             background: #1a1a1a;
-            color: #ccc;
+            color: #ddd;
             padding: 3px 8px;
             border-radius: 12px;
             font-size: 0.8rem;
@@ -270,7 +270,7 @@
         .article-content {
             font-size: 1.15rem;
             line-height: 1.8;
-            color: #e5e5e5;
+            color: #f5f5f5;
             max-width: 680px;
             margin: 0 auto;
         }
@@ -320,7 +320,7 @@
             margin: 30px 0;
             font-style: italic;
             border-radius: 0 8px 8px 0;
-            color: #ccc;
+            color: #ddd;
         }
         
         .article-content code {
@@ -329,7 +329,7 @@
             border-radius: 4px;
             font-size: 0.95em;
             font-family: 'Monaco', 'Consolas', monospace;
-            color: #e5e5e5;
+            color: #f5f5f5;
         }
         
         .article-content pre {
@@ -441,29 +441,6 @@
             }
             
             .article-title {
-                font-size: 1.8rem;
-            }
-            
-            .article-meta {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .article-content {
-                font-size: 1.05rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 12px;
-            }
-            
-            .article-container {
-                padding: 30px 20px;
-            }
-            
-            .article-title {
                 font-size: 1.6rem;
             }
         }
@@ -494,7 +471,15 @@
                     </div>
                     <div class="nav-links">
                         {{ range .Site.Menus.main }}
-                        <a href="{{ .URL }}"{{ if eq .URL (printf "/%s/" $.Section) }} class="active"{{ end }}>{{ .Name }}</a>
+                        {{ $isActive := false }}
+                        {{ if and (eq .URL "/posts/") (eq $.Section "posts") }}
+                            {{ $isActive = true }}
+                        {{ else if and (eq .URL "/off-topic/") (eq $.Section "off-topic") }}
+                            {{ $isActive = true }}
+                        {{ else if and (eq .URL "/about/") (and (not $.Section) (eq $.Type "page")) }}
+                            {{ $isActive = true }}
+                        {{ end }}
+                        <a href="{{ .URL }}"{{ if $isActive }} class="active"{{ end }}>{{ .Name }}</a>
                         {{ end }}
                     </div>
                 </nav>
@@ -545,4 +530,27 @@
         </div>
     </footer>
 </body>
-</html>
+</html> 1.8rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .article-content {
+                font-size: 1.05rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            .article-container {
+                padding: 30px 20px;
+            }
+            
+            .article-title {
+                font-size:
