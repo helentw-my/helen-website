@@ -118,7 +118,7 @@
         }
         
         .yin-dot {
-            top: 10.5px;     /* 波峰位置 */
+            top: 10.5px;
             right: 12.6px;   
             width: 4.2px;
             height: 4.2px;
@@ -126,7 +126,7 @@
         }
         
         .yang-dot {
-            bottom: 10.5px;   /* 波谷位置 */
+            bottom: 10.5px;
             left: 12.6px;     
             width: 4.2px;
             height: 4.2px;
@@ -441,6 +441,29 @@
             }
             
             .article-title {
+                font-size: 1.8rem;
+            }
+            
+            .article-meta {
+                flex-direction: column;
+                gap: 10px;
+            }
+            
+            .article-content {
+                font-size: 0.95rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 12px;
+            }
+            
+            .article-container {
+                padding: 30px 20px;
+            }
+            
+            .article-title {
                 font-size: 1.6rem;
             }
         }
@@ -530,27 +553,4 @@
         </div>
     </footer>
 </body>
-</html> 1.8rem;
-            }
-            
-            .article-meta {
-                flex-direction: column;
-                gap: 10px;
-            }
-            
-            .article-content {
-                font-size: 0.95rem;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .container {
-                padding: 0 12px;
-            }
-            
-            .article-container {
-                padding: 30px 20px;
-            }
-            
-            .article-title {
-                font-size:
+</html>
