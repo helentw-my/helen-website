@@ -440,7 +440,7 @@
                     </div>
                     <div class="nav-links">
                         {{ range .Site.Menus.main }}
-                        <a href="{{ .URL }}"{{ if eq .URL (printf "/%s/" $.Section) }} class="active"{{ end }}>{{ .Name }}</a>
+                        <a href="{{ .URL }}"{{ if and (eq .URL "/off-topic/") (eq $.Section "off-topic") }} class="active"{{ else if and (eq .URL "/posts/") (eq $.Section "posts") }} class="active"{{ else if and (eq .URL "/about/") (eq $.Type "page") (not $.Section) }} class="active"{{ end }}>{{ .Name }}</a>
                         {{ end }}
                     </div>
                 </nav>
